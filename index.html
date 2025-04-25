@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOME FILME TROCA</title>
+</head>
+<body>
+
+    <h1>BEM VINDO AO JOGO DOS FILMES</h1>
+
+    <h4>Troque uma palavra do nome dos filmes e veja o que acontece!</h4>
+
+    <br>
+
+    <p>A hora do <strong id="palavra1">Rush</strong></p>
+    <p>O <strong id="palavra2">Mágico</strong> de Oz</p>
+    <p>11 Homens e um <strong id="palavra3">segredo</strong></p>
+    <p><strong id="palavra4">Planeta</strong> dos Macacos</p>
+    <p>Procurando <strong id="palavra5">Nemo</strong></p>
+
+    <input id="palavra" type="text" placeholder="Digite uma palavra">
+    <br><br>
+    <button onclick="trocaPalavra()">JOGAR</button>
+    
+    <script>
+
+        function trocaPalavra() {
+            // PEGAR VALOR DIGITADO NO INPUT ATRAVES DO ID
+            var palavraDigitada = document.getElementById("palavra").value
+            
+            // ENCONTRA O STRONG COM ID "palavra1" E INSERE A PALAVRA DIGITADA PELO USUÁRIO
+            document.getElementById("palavra1").innerHTML = palavraDigitada
+            document.getElementById("palavra2").innerHTML = palavraDigitada
+            document.getElementById("palavra3").innerHTML = palavraDigitada
+            document.getElementById("palavra4").innerHTML = palavraDigitada
+            document.getElementById("palavra5").innerHTML = palavraDigitada
+            
+            
+            //alert("teste")
+        }
+
+    </script>
+
+</body>
+</html>
