@@ -11,6 +11,7 @@ function deleteFilm(el){
 
 document.getElementById("formNewFirm").addEventListener("submit", (e) =>{
   e.preventDefault()
+
   const filme = document.getElementById("filme").value
   const palavraSub = document.getElementById("palavraSub").value
 
@@ -18,7 +19,6 @@ document.getElementById("formNewFirm").addEventListener("submit", (e) =>{
 
   if(palavraValida == -1){
     console.log("erro")
-    // document.getElementById("error").innerText = "Não foi possível criar esse filme"
     return
   }
 
@@ -29,6 +29,9 @@ document.getElementById("formNewFirm").addEventListener("submit", (e) =>{
   novoFilme.innerHTML = `${arrayNomeFilme[0]} <strong class="palavraSub">${palavraSub}</strong> ${arrayNomeFilme[1]} <button onclick="deleteFilm(this)">X</button>`
 
   document.getElementById("divFilmes").appendChild(novoFilme)
+
+  document.getElementById("filme").value = ""
+  document.getElementById("palavraSub").value = ""
 })
 
 function trocaPalavra() {

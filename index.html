@@ -9,63 +9,78 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>Bem-vindo ao jogo Troca-palavras! <button onclick="openModal()">Como funciona?</button></h1>
-
-    <dialog id="comoJogar">
-        <h2>Como jogar:</h2>
-        <p>Insira uma palavra para substituir um trecho do nome do filme</p>
-        <button onclick="closeModal()">Fechar</button>
-    </dialog>
-
-    <h4>Troque uma palavra do nome dos filmes e veja o que acontece!</h4>
-
-    <br>
-    <div id="divFilmes">
-        <p class="filmes">A hora do 
-            <strong id="palavra1">Rush</strong>
-            <button onclick="deleteFilm(this)">X</button>
-        </p>
-        <p class="filmes">O 
-            <strong id="palavra2">Mágico</strong>
-            de Oz
-            <button onclick="deleteFilm(this)">X</button>
-        </p>
-        <p class="filmes">11 Homens e um 
-            <strong id="palavra3">segredo</strong>
-            <button onclick="deleteFilm(this)">X</button>
-        </p>
-        <p class="filmes">
-            <strong id="palavra4">Planeta</strong>
-            dos Macacos
-            <button onclick="deleteFilm(this)">X</button>
-        </p>
-        <p class="filmes">Procurando 
-            <strong id="palavra5">Nemo</strong>
-            <button onclick="deleteFilm(this)">X</button>
-        </p>    
-    </div>
-   
-    <input id="palavra" type="text" placeholder="Digite uma palavra">
-    <br><br>
-    <button onclick="trocaPalavra()">JOGAR</button>
+    <header>
+        <h1>Bem-vindo ao jogo Troca-palavras!</h1>
+        <button onclick="openModal()">Como funciona?</button>
     
-    <hr>
-    <form id="formNewFirm">
-        <h2>Adicionar novo filme</h2>
-        <label>Nome do filme:</label><br>
-        <input type="text" id="filme"><br>
-        <label>Palavra para substituir:</label><br>
-        <input type="text" id="palavraSub"><br>
-        <button>Enviar</button>
-    </form>
-    <script>
+        <dialog id="comoJogar">
+            <h2>Como jogar:</h2>
+            <p>Insira uma palavra para substituir um trecho do nome do filme</p>
+            <button onclick="closeModal()">Fechar</button>
+        </dialog>
+    
+        <h4>Troque uma palavra do nome dos filmes e veja o que acontece!</h4>
+    </header>
+    <main>
+        <section>
+            <div id="divFilmes">
+                <p class="filmes">A hora do 
+                    <strong id="palavra1">Rush</strong>
+                    <button onclick="deleteFilm(this)">X</button>
+                </p>
+                <p class="filmes">O 
+                    <strong id="palavra2">Mágico</strong>
+                    de Oz
+                    <button onclick="deleteFilm(this)">X</button>
+                </p>
+                <p class="filmes">11 Homens e um 
+                    <strong id="palavra3">segredo</strong>
+                    <button onclick="deleteFilm(this)">X</button>
+                </p>
+                <p class="filmes">
+                    <strong id="palavra4">Planeta</strong>
+                    dos Macacos
+                    <button onclick="deleteFilm(this)">X</button>
+                </p>
+                <p class="filmes">Procurando 
+                    <strong id="palavra5">Nemo</strong>
+                    <button onclick="deleteFilm(this)">X</button>
+                </p>    
+            </div>
+        
+            <input id="palavra" type="text" placeholder="Digite uma palavra">
+            <br><br>
+            <button onclick="trocaPalavra()">JOGAR</button>
+            
+        </section>
+        <section>
+            <hr>
+            <form id="formNewFirm">
+                <h2>Adicionar novo filme</h2>
+                <label>Nome do filme:</label><br>
+                <input type="text" id="filme" required placeholder="Nome do filme"><br>
+                <label>Palavra para substituir:</label><br>
+                <input type="text" id="palavraSub" required placeholder="Palavra a substituir"><br>
+                <button>Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <p>Github dos desenvolvedores</p>
+            <div id="desenvolvedores">
+                <a target="_blank" href="https://github.com/FelipeGSG">FelipeGSG</a>
+            </div>
+            <div id="desenvolvedores">
+                <a target="_blank" href="https://github.com/GuilhSchneider">GuilhSchneider</a>
+            </div>
+        </section>
+        <section>
+            <p>Projeto educacional <br> SENAI Nami Jafet</p>
+        </section>
 
-
-
-    </script>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
