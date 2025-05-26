@@ -35,14 +35,9 @@ document.getElementById("formNewFirm").addEventListener("submit", (e) =>{
 })
 
 function trocaPalavra() {
-  // PEGAR VALOR DIGITADO NO INPUT ATRAVES DO ID
-  var palavraDigitada = document.getElementById("palavra").value
-  
-  // ENCONTRA O STRONG COM ID "palavra1" E INSERE A PALAVRA DIGITADA PELO USUÁRIO
-  document.getElementById("palavra1").innerHTML = palavraDigitada
-  document.getElementById("palavra2").innerHTML = palavraDigitada
-  document.getElementById("palavra3").innerHTML = palavraDigitada
-  document.getElementById("palavra4").innerHTML = palavraDigitada
-  document.getElementById("palavra5").innerHTML = palavraDigitada
-  
+  const strong = document.querySelectorAll("strong")
+
+  strong.forEach(el =>{
+    el.innerText = document.getElementById("palavra").value
+  })
 }
