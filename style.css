@@ -1,128 +1,141 @@
-body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  background: url(imgs/background.png) #101018;
-  background-size: cover;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url(../img/background.png) #393C5E;
   background-repeat: no-repeat;
+  background-size: 102%;
+  background-attachment: fixed;
+  background-position: -20px -10px;
+  color: #f0f0f0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: white;
-}
-div{
-  background-color: rgb(17, 119, 102);
-  padding: 15px;
-  border: 0;
-  border-radius: 15px;
-}
-button{
-  color: white;
-  border: #101018;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  background-color: #042010;
-  transition: .3s;
-}
-button:hover{
-  background-color: #064722;
-  border: 1px solid white;
-}
-header{
-  box-sizing: border-box;
-  text-align: center;
-  width: 100%;
-  min-height: 140px;
-  background-color: rgba(9, 58, 43, 0.897);
-  padding: 20px 10px;
-}
-header button{
-  padding: 5px;
-  margin: 20px 0px ;
-}
-h1{
   margin: 0;
-  color: rgb(171, 216, 171);
-  text-shadow: 0px 0px 10px rgba(182, 226, 182, 0.63);
-  font-size: 3em;
 }
-h1, h4, form{
-  margin:0;
+
+header {
   text-align: center;
-}
-dialog{
-  border-radius: 15px;
-  border: 1px solid gray;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.705);
+  background-color: #393c5eb7;
+  width: 100%;
+  height: 100%; 
+  margin-bottom: 100px;
 }
 
-main{
-  margin: 50px 0px;
-  padding: 50px 100px;
-  border-radius: 20px;
-  background-color: rgba(9, 58, 43, 0.897);
+main {
+  text-align: center;
+  background-color: #393c5e80;
+  padding: 15px 50px;
+  border-radius: 10%;
 }
-#divFilmes button{
-  color: white;
-  background-color: #042010;
-  padding: 5px;
-  border: 0;
-  width: 25px;
-  height: 25px;
-  margin-left: 10px;
+
+#status {
+  text-align: center;
+  margin-bottom: 20px;
 }
-  #divFilmes button:hover{
-    background-color: #9b0c0c;
-  }
-  
-.filmes{
-  margin: 4px 0px;
-  padding: 5px;
+
+#status p {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
-.filmes button{
-  float: right;
-  margin: 0px 3px;
+
+#campoJogo {
+  background-color: #393C5E;
+  width: fit-content;
+  margin: 0 auto;
 }
-input{
+
+.row {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.slot {
   box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  background-color: #4e4b7b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  margin: 2px;
+  border: 2px solid transparent;
+}
+
+.slot:hover {
+  background-color: #6c66a1;
+  transform: scale(1.05);
+}
+
+.slotsVencedores {
+  background-color: #636094;
+  border: 2px solid rgb(18, 207, 119);
+}
+
+.icone {
+  width: 60px;
+  height: 60px;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #5b598d;
   color: white;
-  margin: 10px 0;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid rgb(12, 85, 73);
-  border-radius: 15px;
-  background-color: rgb(34, 139, 122);
-  outline: 0;
-}
-input:active, input:focus{
-  border: 1px solid  white;
-
-}
-input::placeholder{
-  color: rgb(215, 255, 238);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-section button:not(.filmes button){
-  width: 100%;
-  padding: 10px 5px;
-
+button:hover {
+  background-color: #6c66a1;
+  transform: scale(1.05);
 }
 
+button:disabled {
+  color: rgb(168, 165, 175);
+  background-color: #464569;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+#pontuacao {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffcd00;
+  margin-top: 10px;
+}
+
+#quemJoga {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #ffcd00;
+  font-weight: 500;
+  opacity: calc(0);
+}
 
 footer {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  padding: 50px 0;
-  margin-top: 25px;
+  padding: 30px 0;
+  margin-top: 98.8px;
   color: #e7e7e7;
-  background-color: rgba(9, 58, 43, 0.897);
+  background-color: #393c5eb7;
   font-size: 0.9em;
 }
-footer section{
+
+footer section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,25 +145,17 @@ footer section{
   word-wrap: break-word;
   word-break: break-all;
 }
-#desenvolvedores{
+
+#desenvolvedores {
   padding: 5px 0px;
   background-color: transparent;
 }
-footer a{
+
+footer a {
   text-decoration: none;
   color: #9bdaff;
 }
-footer a:hover{
-  text-decoration: underline;
-}
 
-@media (max-width: 600px) {
-  h1{
-    font-size: 2.4em;
-  }
-  main{
-    border-radius: 0;
-    box-sizing: border-box;
-    padding: 30px;
-  }
+footer a:hover {
+  text-decoration: underline;
 }
